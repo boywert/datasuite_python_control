@@ -70,7 +70,7 @@ if exist "python_control" (
     call git pull
 ) else (
     echo [INFO] Repository folder not found. Cloning...
-    call git clone https://gitlab.vayulab.net/chaichalit.s/python_control.git
+    call git clone https://github.com/boywert/datasuite_python_control.git
     cd python_control
 )
 
@@ -81,11 +81,11 @@ if exist "python_control" (
 
 echo Current Directory: %CD%
 
-if exist "requirement.txt" (
+if exist "requirements.txt" (
     echo Installing dependencies...
-    call pip install -r requirement.txt 
+    call pip install -r requirements.txt 
 ) else (
-    echo [WARNING] requirement.txt not found in %CD%
+    echo [WARNING] requirements.txt not found in %CD%
     echo Please check if the file is named 'requirements.txt' instead.
 )
 

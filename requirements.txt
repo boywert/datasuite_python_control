@@ -92,8 +92,6 @@ jupyterlab==4.5.0
 jupyterlab_pygments==0.3.0
 jupyterlab_server==2.28.0
 kiwisolver==1.4.9
-ktb_db_connect @ git+https://gitlab.vayulab.net/chaichalit.s/ktb_db_connect_module.git@58339e8d21c77c42796939f5f73f284708ed9c48
-ktb_utils @ git+https://gitlab.vayulab.net/chaichalit.s/ktb_utils_module.git@10f6c53c6f605d5187991b1a8eb8e0bf4bedaf67
 lark==1.3.1
 lightgbm==4.6.0
 lxml==6.0.2
