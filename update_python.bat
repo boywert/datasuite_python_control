@@ -71,7 +71,7 @@ if exist "python_control" (
 ) else (
     echo [INFO] Repository folder not found. Cloning...
     call git clone https://github.com/boywert/datasuite_python_control.git
-    cd python_control
+    cd datasuite_python_control
 )
 
 :: ==========================================
@@ -86,7 +86,6 @@ if exist "requirements.txt" (
     call pip install -r requirements.txt 
 ) else (
     echo [WARNING] requirements.txt not found in %CD%
-    echo Please check if the file is named 'requirements.txt' instead.
 )
 
 
