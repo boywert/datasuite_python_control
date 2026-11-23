@@ -61,7 +61,7 @@ httpx==0.28.1
 huggingface-hub==0.36.0
 hyperframe==6.1.0
 hyperlink==21.0.0
-ibm_db==3.2.7
+ibm_db>=3.2.7
 idna==3.11
 impyla==0.22.0
 incremental==24.7.2
