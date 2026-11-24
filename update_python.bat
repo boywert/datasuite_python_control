@@ -68,10 +68,10 @@ if "!ENV_FOUND!"=="1" (
         set "CUR_PY=%%v"
     )
 
-    set "LATEST_PY="
-    for /f "tokens=1,2" %%a in ('conda search "python=%TARGET_MINOR%.*" 2^>nul') do (
-        if "%%a"=="python" set "LATEST_PY=%%b"
-    )
+	set "LATEST_PY="
+	for /f "usebackq delims=" %%v in (`powershell -NoProfile -Command "$out = conda search 'python=%TARGET_MINOR%.*' 2>$null; $vers = [regex]::Matches($out, '\b\d+\.\d+\.\d+\b') | ForEach-Object { [version]$_.Value } | Sort-Object -Descending | Select-Object -First 1; if ($vers) { $vers.ToString() }"`) do (
+		set "LATEST_PY=%%v"
+	)
 
     if defined CUR_PY if defined LATEST_PY (
         echo [INFO] Installed: !CUR_PY! ^| Newest available: !LATEST_PY!
